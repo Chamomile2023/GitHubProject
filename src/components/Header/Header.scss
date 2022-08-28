@@ -1,0 +1,39 @@
+.header{
+    width: 100%;
+    background-color: rgb(5, 6, 16);
+    &__hero{
+        display: flex;
+        align-items: center;
+    }
+    &--icon{
+        color: #fff;
+        font-size: 35px;
+        padding-right: 20px;
+    }
+    &--input{
+        background-color: transparent;
+        border: 1px solid gray;
+        outline: none;
+        border-radius: 6px;
+        padding: 0px 80px 0 10px;
+        color: #fff;
+        &::placeholder{
+            color: gray;
+        }
+    }
+    &__search{
+        display: flex;
+        position: relative;
+    }
+    &--span{
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        border: 1px solid gray;
+        color: gray;
+        border-radius: 4px;
+        position: absolute;
+        top: 2.5px;
+        right: 2.5px;
+    }
+}
