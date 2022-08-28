@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Quicksand:wght@300;400&display=swap');
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+}
+.login{
+    max-width: 100%;
+    position: relative;
+    &__hero{
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    &--github{
+        font-size: 45px;
+    }
+    &__logo,&__sign{
+        text-align: center;
+    }
+    &__sign{
+        font-weight: 400;
+        font-size: 25px;
+        padding-top: 25px;
+        margin-bottom: 15px;
+    }
+    &__basic{
+        width: 320px;
+        height: 210px;
+        border: 1px solid #e6e3e3;
+        border-radius: 5px;
+        background-color: #f8f8f9;
+        padding: 20px 15px;
+        &--text{
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+        }
+    }
+    &__account{
+        width: 320px;
+        height: 60px;
+        margin-top: 10px;
+        border: 1px solid #e6e3e3;
+        border-radius: 5px;
+        padding: 18px 15px;
+        text-align: center;
+        &--span{
+            color: #187ee4;
+        }
+    }
+    &--list{
+        display: flex;
+        margin-top: 55px;
+    }
+    &--link{
+        font-size: 12px;
+        font-weight: 400;
+        margin-right: 10px;
+        &:hover{
+            text-decoration: underline !important;
+        }
+    }
+}
+.btn{
+    padding: 5px 119px !important;
+    margin-top: 15px;
+
+}
+p{
+    margin: 0 !important;
+}
+a{
+    text-decoration: none !important;
+}
+@media screen and (max-width: 350px){
+    .container-fluid{
+        width: 250px;
+        margin: 0 auto;
+    }
+    .login{
+         &__basic{
+        width: 300px;
+        height: 205px;
+    }
+    .btn{
+        padding: 5px 109px !important;
+        margin-top: 15px;
+    }
+    &__account{
+        width: 300px;
+        height: 60px;
+        margin-top: 10px;
+    }
+    }
+    
+}
