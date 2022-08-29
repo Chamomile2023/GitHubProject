@@ -14,11 +14,12 @@ const RightSIde = () => {
             <div className="right__cards">
               <div className="right__card">
                 <div className="right__card__name">
-                  <h6 className="right__card--title">Country</h6>
+                  <h6 className="right__card--title"><a href="#" className="right__card--link">Country</a></h6>
                   <span className="right__card--span">Public</span>
                 </div>
                 <div className="right__language">
-                  <div className="right__language--circle">JavaScript</div>
+                  <div className="right__language--circle"></div>
+                  <div className="right__language--lan">JavaScript</div>
                 </div>
               </div>
             </div>

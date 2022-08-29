@@ -2,6 +2,7 @@ import React from "react";
 import "./Main.scss";
 import LeftSide from "../LeftSide/LeftSide";
 import RightSide from "../RightSide/RightSIde";
+import { Link } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -25,10 +26,12 @@ const Main = () => {
                   </a>
                 </li>
                 <li className="main--item">
-                  <a href="#" className="main--link">
-                    <i class="fa-solid fa-list-check"></i>
-                    Projects
-                  </a>
+                  <Link to="/main/Project">
+                    <a href="#" className="main--link">
+                      <i class="fa-solid fa-list-check"></i>
+                      Projects
+                    </a>
+                  </Link>
                 </li>
                 <li className="main--item">
                   <a href="#" className="main--link">

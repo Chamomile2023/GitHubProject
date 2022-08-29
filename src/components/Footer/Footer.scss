@@ -1,10 +1,14 @@
+
 .footer{
     width: 100%;
+    background-color: #fff;
+    position: relative;
     &__hero{
         display: flex;
         align-items: center;
         padding: 40px 0;
         border-top: 1px solid rgb(194, 192, 192);
+        z-index: 100;
     }
     &__logo{
         display: flex;
@@ -15,16 +19,111 @@
         }
     }
     &--item{
+        width: 768px;
         display: flex;
+        flex-wrap: wrap;
+        justify-content:space-between;
     }
     &--parag,&--link{
         font-size: 14px;
         font-weight: normal;
     }
-    &--list{
-        padding-right: 45px;
-    }
     &--link{
         color: blue;
+    }
+}
+@media screen and (max-width: 992px){
+    .container-fluid{
+        width: 972px;
+        margin: 0 auto;
+    }
+    .footer{
+        &__hero{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        &--item{
+            width: 628px;
+        }
+    }
+    ol, ul {
+        padding-left: 0rem !important; 
+   }
+}
+@media screen and (max-width:768px){
+    .container-fluid{
+        width: 748px;
+        margin: 0 auto;
+    }
+    .footer{
+        &__logo{
+            padding-top: 15px;
+        }
+        &--item{
+            width: 528px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &--link{
+            padding-right: 10px;
+        }
+        &--link, &--parag{
+            font-size: 12px;
+        }
+    }
+}
+@media  screen and (max-width: 576px) {
+    .container-fluid{
+        width: 556px;
+    }
+    .footer{
+        &__logo{
+            padding-top: 15px;
+        }
+        &--item{
+            width: 428px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--link{
+            padding-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 440px){
+    .container-fluid{
+        width: 420px;
+    }
+    .footer{
+        &__logo{
+            padding-top: 15px;
+        }
+        &--item{
+            width: 320px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--link{
+            padding-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 320px){
+    .container-fluid{
+        width: 300px;
+    }
+    .footer{
+        &__logo{
+            padding-top: 15px;
+        }
+        &--item{
+            width: 200px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--link{
+            padding-right: 8px;
+        }
     }
 }

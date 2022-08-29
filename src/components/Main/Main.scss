@@ -17,11 +17,12 @@
         color: #000;
         font-weight: 400;
         font-size: 16px;
+        padding: 10px;
         &:hover{
             background-color: rgba(192, 192, 192, 0.796);
-            padding: 10px;
-            color: #fff;
             border-radius: 6px;
+            color: #000;
+            text-decoration: none !important;
         }
     }
     //Sides
