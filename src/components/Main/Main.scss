@@ -1,0 +1,41 @@
+.main{
+    width: 100%;
+    &--list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__navbar{
+        padding: 35px 0 15px 0;
+        border-bottom: 1px solid gray;
+    }
+    &--item{
+        padding: 0 20px;
+        
+    }
+    &--link{
+        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+        &:hover{
+            background-color: rgba(192, 192, 192, 0.796);
+            padding: 10px;
+            color: #fff;
+            border-radius: 6px;
+        }
+    }
+    //Sides
+    &__sides{
+        display: flex;
+        &__left{
+            width: 25%;
+        }
+        &__right{
+            width: 75%;
+        }
+    }
+}
+i{
+    color: #000;
+    padding-right: 8px;
+}
