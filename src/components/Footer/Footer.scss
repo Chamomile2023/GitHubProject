@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         padding: 40px 0;
-        border-top: 1px solid gray;
+        border-top: 1px solid rgb(194, 192, 192);
     }
     &__logo{
         display: flex;
@@ -23,5 +23,8 @@
     }
     &--list{
         padding-right: 45px;
+    }
+    &--link{
+        color: blue;
     }
 }
