@@ -4,6 +4,7 @@
     &__hero{
         display: flex;
         align-items: center;
+        padding: 15px 0;
     }
     &--icon{
         color: #fff;
@@ -45,9 +46,131 @@
             font-weight: 700;
             font-size: 15px;
             padding-right: 15px;
+            color: #fff;
+            &:hover{
+                color: gray;
+            }
         }
     }
     &__avatar{
-        margin-right: 15px;
+        margin-left: auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &--span{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid red;
+            background-color: red;
+            margin-right: 5px;
+        }
+        &--icon{
+            color: #fff;
+        }
+        &--message{
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            border-top: 15px solid #fff;
+            border-right: 10px solid transparent;            
+            border-left: 10px solid transparent; 
+            transform: rotate(180deg);  
+        }
+        &__dropdown{
+            width: 180px;
+            position: absolute;
+            right: 5px;
+            top: 38px;
+            background-color: #fff;
+            border-radius: 6px;
+            border: 1px solid gray;
+            margin-left: 0 !important;
+        }
+        &--list{
+            padding: 15px;
+        }
+        &--links{
+                color: #000 !important;
+                font-weight: bold;
+                font-size: 16px;
+                padding: 5px 0;
+            }
+    }
+    &__toggle{
+        display: none;
+        &__navbar{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        &--input{
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid gray;
+            outline: none;
+            border-radius: 6px;
+            padding: 5px 10px;
+            color: #fff;
+        }
+        &--list{
+            width: 100%;
+            text-align: center;
+            padding: 0;
+            margin: 20px 0;
+        }
+        &--item{
+            width: 100%;
+            border-top: 1px solid gray;
+            padding: 10px 0;
+        }
+        &--link{
+            font-weight: 400;
+            font-size: bold;
+            color: #fff;
+            &:hover{
+                color: gray;
+            }
+        }
+    }
+    &--logo{
+        color: #fff;
+        font-size: 35px;
+    }
+}
+dl, ol, ul {
+    margin-bottom: 0rem !important;
+}
+.fa-bars, .fa-bell{
+    color: #fff;
+    font-size: 20px;
+}
+.one{
+    width: 100%;
+    border-bottom: 1px solid gray;
+    padding: 5px 0;
+}
+.hide{
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .container-fluid{
+        width: 748px;
+        margin: 0 auto;
+    }
+    .header{
+        &__hero{
+            display: none;
+        }
+        &__toggle{
+            display: block;
+        }
+    }
+    .show{
+        display: block;
+    }
+    .hide{
+        display: none;
     }
 }
