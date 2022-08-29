@@ -2,9 +2,9 @@ import React from "react";
 import "./Main.scss";
 import LeftSide from "../LeftSide/LeftSide";
 import RightSide from "../RightSide/RightSIde";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const Main = () => {
+const Main = ({ data }) => {
   return (
     <>
       <main className="main">
@@ -13,10 +13,10 @@ const Main = () => {
             <div className="main__navbar">
               <ul className="main--list">
                 <li className="main--item">
-                  <a href="#" className="main--link">
+                  <NavLink to="/main" className="main--link">
                     <i class="fa-solid fa-book-open"></i>
                     Overview
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="main--item">
                   <a href="#" className="main--link">
@@ -26,12 +26,10 @@ const Main = () => {
                   </a>
                 </li>
                 <li className="main--item">
-                  <Link to="/main/Project">
-                    <a href="#" className="main--link">
-                      <i class="fa-solid fa-list-check"></i>
-                      Projects
-                    </a>
-                  </Link>
+                  <NavLink to="/project" className="main--link">
+                    <i class="fa-solid fa-list-check"></i>
+                    Projects
+                  </NavLink>
                 </li>
                 <li className="main--item">
                   <a href="#" className="main--link">
@@ -43,10 +41,10 @@ const Main = () => {
             </div>
             <div className="main__sides">
               <div className="main__sides__left">
-                <LeftSide />
+                <LeftSide data={data} />
               </div>
               <div className="main__sides__right">
-                <RightSide />
+                <RightSide data={data} />
               </div>
             </div>
           </div>

@@ -59,11 +59,10 @@
         display: flex;
         align-items: center;
         &--span{
-            width: 30px;
-            height: 30px;
+            width: 35px;
+            height: 35px;
             border-radius: 50%;
-            border: 1px solid red;
-            background-color: red;
+            border: 1px solid transparent;
             margin-right: 5px;
         }
         &--icon{

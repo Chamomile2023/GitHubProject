@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Routes, Route } from "react-router-dom";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ data }) => {
   //Toggle Button
   const [bar, setBar] = useState(false);
   let openBar = () => {
@@ -20,7 +20,7 @@ const Header = () => {
         <div className="container-fluid">
           <div className="header__hero">
             <div className="header__logo">
-              <NavLink to="/">
+              <NavLink to="/main">
                 <i class="fa-brands fa-github header--icon"></i>
               </NavLink>
             </div>
@@ -35,7 +35,12 @@ const Header = () => {
             <div className="header__menu">
               <ul className="header__menu--list">
                 <li className="header__menu--item">
-                  <a href="https://github.com/pulls">Pull requests</a>
+                  <a
+                    href="https://github.com/pulls"
+                    className="header__menu--link"
+                  >
+                    Pull requests
+                  </a>
                 </li>
                 <li className="header__menu--item">
                   <a
@@ -64,7 +69,10 @@ const Header = () => {
               </ul>
             </div>
             <div className="header__avatar">
-              <div className="header__avatar--span"></div>
+              <img
+                src="https://avatars.githubusercontent.com/u/101083132?v=4"
+                className="header__avatar--span"
+              />
               <i
                 className="fa-solid fa-caret-down header__avatar--icon"
                 onClick={() => openDropdown()}
@@ -75,10 +83,9 @@ const Header = () => {
                 <div className="header__avatar--message"></div>
                 <ul className="header__avatar--list">
                   <li className="header__avatar--item one">
-                    <a href="#" className="header__avatar--links">
-                      {" "}
+                    <NavLink to="/main" className="header__avatar--links">
                       Chamomile2023
-                    </a>
+                    </NavLink>
                   </li>
                   <li className="header__avatar--item">
                     <a href="#" className="header__avatar--links">

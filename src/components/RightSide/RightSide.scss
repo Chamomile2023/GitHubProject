@@ -50,9 +50,10 @@
         &--circle{
             width: 15px;
             height: 15px;
-            border: 1px solid yellow;
+            border: 1px solid transparent;
             background-color: yellow;
             border-radius: 50%;
+            margin-right: 5px;
         }
         &--lan{
             font-size: 14px;
@@ -64,4 +65,13 @@ a:hover{
 }
 ::-webkit-scrollbar {
     width: 0;
+}
+.carrot{
+    background-color: rgb(255, 106, 0);
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: rgb(240, 28, 84);
 }
