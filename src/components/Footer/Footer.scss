@@ -1,0 +1,27 @@
+.footer{
+    width: 100%;
+    &__hero{
+        display: flex;
+        align-items: center;
+        padding: 40px 0;
+        border-top: 1px solid gray;
+    }
+    &__logo{
+        display: flex;
+        align-items: center;
+        &--logo{
+            font-size: 30px;
+            padding-right: 10px;
+        }
+    }
+    &--item{
+        display: flex;
+    }
+    &--parag,&--link{
+        font-size: 14px;
+        font-weight: normal;
+    }
+    &--list{
+        padding-right: 45px;
+    }
+}
