@@ -45,6 +45,7 @@
         border-radius: 5px;
         padding: 18px 15px;
         text-align: center;
+
         &--span{
             color: #187ee4;
         }
@@ -60,6 +61,10 @@
         &:hover{
             text-decoration: underline !important;
         }
+    }
+    &__footer{
+        display: flex;
+        justify-content: center;
     }
 }
 .btn{
@@ -82,6 +87,10 @@ a{
          &__basic{
         width: 300px;
         height: 205px;
+        &__footer{
+            display: flex;
+            justify-content:center;
+        }
     }
     .btn{
         padding: 5px 109px !important;

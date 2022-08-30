@@ -13,7 +13,7 @@ const Main = ({ data, totalPage, dataSlice, paginationPage }) => {
             <div className="main__navbar">
               <ul className="main--list">
                 <li className="main--item">
-                  <NavLink to="/main" className="main--link">
+                  <NavLink to="/" className="main--link">
                     <i class="fa-solid fa-book-open"></i>
                     Overview
                   </NavLink>
@@ -26,10 +26,10 @@ const Main = ({ data, totalPage, dataSlice, paginationPage }) => {
                   </NavLink>
                 </li>
                 <li className="main--item">
-                  <NavLink to="/project" className="main--link">
+                  <a href="#" className="main--link">
                     <i class="fa-solid fa-list-check"></i>
                     Projects
-                  </NavLink>
+                  </a>
                 </li>
                 <li className="main--item">
                   <a href="#" className="main--link">

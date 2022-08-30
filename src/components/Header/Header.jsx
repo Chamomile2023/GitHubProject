@@ -22,7 +22,7 @@ const Header = ({ data }) => {
         <div className="container-fluid">
           <div className="header__hero">
             <div className="header__logo">
-              <NavLink to="/main">
+              <NavLink to="/">
                 <i class="fa-brands fa-github header--icon"></i>
               </NavLink>
             </div>
@@ -143,16 +143,8 @@ const Header = ({ data }) => {
                     Settings
                   </a>
                 </li>
-                <li
-                  className="header__toggle--item"
-                  onClick={() => {
-                    return out("/login");
-                  }}
-                >
-                  <a
-                    href="#"
-                    className={`header__toggle--link ${out("/login")}`}
-                  >
+                <li className="header__toggle--item">
+                  <a href="#" className="header__toggle--link">
                     Sign out
                   </a>
                 </li>
