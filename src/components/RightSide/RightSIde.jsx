@@ -1,7 +1,8 @@
 import React from "react";
 import "./RightSide.scss";
+import Pagination from "../Pagination/Pagination"
 
-const RightSIde = ({ data }) => {
+const RightSIde = ({ data, totalPage, dataSlice, paginationPage }) => {
   return (
     <>
       <div className="right">
@@ -32,6 +33,9 @@ const RightSIde = ({ data }) => {
                   </div>
                 );
               })}
+            </div>
+            <div className="right__pagination">
+              {/* <Pagination data={data} totalPage={totalPage} dataSlice={dataSlice} paginationPage={paginationPage} /> */}
             </div>
           </div>
         </div>

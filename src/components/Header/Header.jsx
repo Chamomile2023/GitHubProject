@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
+import { NavLink, Routes, Route, useNavigate } from "react-router-dom";
 import "./Header.scss";
 
 const Header = ({ data }) => {
@@ -14,6 +14,8 @@ const Header = ({ data }) => {
   let openDropdown = () => {
     return setDropdown((e) => !e);
   };
+
+  let out = useNavigate();
   return (
     <>
       <header className="header">
@@ -141,8 +143,16 @@ const Header = ({ data }) => {
                     Settings
                   </a>
                 </li>
-                <li className="header__toggle--item">
-                  <a href="#" className="header__toggle--link">
+                <li
+                  className="header__toggle--item"
+                  onClick={() => {
+                    return out("/login");
+                  }}
+                >
+                  <a
+                    href="#"
+                    className={`header__toggle--link ${out("/login")}`}
+                  >
                     Sign out
                   </a>
                 </li>

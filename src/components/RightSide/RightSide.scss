@@ -58,7 +58,12 @@
         &--lan{
             font-size: 14px;
         }
-    }    
+    }   
+    &__pagination{
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    } 
 }
 a:hover{
     text-decoration: underline !important;

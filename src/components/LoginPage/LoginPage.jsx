@@ -1,7 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import "./LoginPage.scss";
 
-const LoginPage = () => {
+const LoginPage = ({ isName, login }) => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const Params = {
+        username: username,
+        password: password,
+    };
+    console.log(Params);
     return (
         <>
             <div className="login">
@@ -16,20 +24,28 @@ const LoginPage = () => {
                         <div className="login__basic">
                             <div className="login__user">
                                 <p className="login__basic--text">Username or email address</p>
-                                <input type="text" className="form-control" />
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    value={username}
+                                    onChange={(e) => setUsername(e.target.value)}
+                                />
                             </div>
                             <div className="login__password">
                                 <p className="login__basic--text">Password</p>
-                                <input type="text" className="form-control" />
+                                <input type="password" className="form-control"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)} />
                             </div>
                             <div className="login__btn">
-                                <button className="btn btn-success">Sign in</button>
+                                <button className="btn btn-success" onClick={() => login(Params)}>Sign in</button>
                             </div>
                         </div>
                         <div className="login__account">
                             <p className="login__basic--text">
                                 New to GitHub?{" "}
-                                <span className="login__account--span">Create an account</span> .
+                                <span className="login__account--span">Create an account</span>{" "}
+                                .
                             </p>
                         </div>
                         <div className="login__footer">

@@ -4,7 +4,7 @@ import LeftSide from "../LeftSide/LeftSide";
 import RightSide from "../RightSide/RightSIde";
 import { NavLink } from "react-router-dom";
 
-const Main = ({ data }) => {
+const Main = ({ data, totalPage, dataSlice, paginationPage }) => {
   return (
     <>
       <main className="main">
@@ -19,11 +19,11 @@ const Main = ({ data }) => {
                   </NavLink>
                 </li>
                 <li className="main--item">
-                  <a href="#" className="main--link">
+                  <NavLink to="/repository" className="main--link">
                     <i class="fa-solid fa-book-bookmark"></i>
                     Repositories
-                    <span className="main--span">32</span>
-                  </a>
+                    <span className="main--span">{data.length}</span>
+                  </NavLink>
                 </li>
                 <li className="main--item">
                   <NavLink to="/project" className="main--link">
@@ -44,7 +44,12 @@ const Main = ({ data }) => {
                 <LeftSide data={data} />
               </div>
               <div className="main__sides__right">
-                <RightSide data={data} />
+                <RightSide
+                  data={data}
+                  totalPage={totalPage}
+                  dataSlice={dataSlice}
+                  paginationPage={paginationPage}
+                />
               </div>
             </div>
           </div>
